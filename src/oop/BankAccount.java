@@ -1,7 +1,7 @@
 package oop;
 
 public class BankAccount {
-    int saldo;
+    private int saldo;
 
     public void setSaldo(int newSaldo){
         saldo = newSaldo;

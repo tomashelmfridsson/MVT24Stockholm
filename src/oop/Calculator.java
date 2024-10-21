@@ -1,7 +1,7 @@
 package oop;
 
 public class Calculator {
-    private int x, y;
+    private int x, y;  // attribut
 
     public Calculator(int inputA, int inputB) {
         x = inputA;
@@ -24,4 +24,11 @@ public class Calculator {
         return x * y;
     }
 
+    public int power() {
+        int result = 1;
+        for (int i = 0; i < y; i++) {
+            result = result * x;
+        }
+        return result;
+    }
 }
