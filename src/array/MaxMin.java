@@ -3,7 +3,7 @@ package array;
 import java.util.Arrays;
 // 74.En array med 50 inlästa tal finns.
 // Leta upp det största och det minsta talet i arrayn och
-// pubskriv ut dem.
+// skriv ut dem.
 class MaxMin {
     public static void main(String[] args) {
         int[] array = new int[50];
@@ -19,7 +19,6 @@ class MaxMin {
         }
         System.out.println(max);
         System.out.println(min);
-         
 
         System.out.println(Arrays.stream(array).max());
         System.out.println(Arrays.stream(array).min());
