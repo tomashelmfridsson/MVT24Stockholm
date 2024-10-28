@@ -11,7 +11,17 @@ class MaxMin {
             array[i] = (int) (Math.random() * 1000);
         }
         System.out.println(Arrays.toString(array));
+        int max =0;
+        int min = 1000;
+        for (int j : array) {
+            if (j > max) max = j;
+            if (j < min) min = j;
+        }
+        System.out.println(max);
+        System.out.println(min);
+         
+
         System.out.println(Arrays.stream(array).max());
-        System.out.println();
+        System.out.println(Arrays.stream(array).min());
     }
 }
