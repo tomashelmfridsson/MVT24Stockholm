@@ -5,11 +5,20 @@ package array;
 //Ex: Om siffrorna i bråket är 6 och 12 ska det lagras i arrayn som 1 och 2.
 //Tips: Ta reda på SGD (största gemensamma divisor). I exemplet är SGD 6.
 
+import java.util.Scanner;
+
 public class Sgd {
     public static void main(String[] args) {
+
+        //int numerator = 7*8*3*2*2; // Täljare
+        //int denominator = 7*3*5*2; // Nämnare
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Skriv täljaren ");
+        int numerator = scanner.nextInt();
+        System.out.print("Skriv nämnaren ");
+        int denominator = scanner.nextInt();
+
         // Loop variant
-        int numerator = 7*8*3*4; // Täljare
-        int denominator = 7*3*5; // Nämnare
         int sgd = Math.min(numerator, denominator); // Största Gemensamma Delare
         for (; sgd > 1; sgd--) {
             if (numerator % sgd == 0 && denominator % sgd == 0) break;
@@ -29,5 +38,8 @@ public class Sgd {
             max = newMax;
         }
         System.out.println("SGD är " + min);
+
+        System.out.println("Täljaren efter förkortning är: "+(numerator /sgd));
+        System.out.println("Nämnaren efter förkortning är "+(denominator/sgd));
     }
 }
