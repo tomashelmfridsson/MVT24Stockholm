@@ -2,10 +2,19 @@ package oop;
 
 public class Calculator {
     private int x, y;  // attribut
+    private String text;
 
     public Calculator(int inputA, int inputB) {
         x = inputA;
         y = inputB;
+    }
+
+    public void setX(int newX){
+        if (newX <10000 ) x = newX;
+    }
+
+    public void setName(String newText){
+        if (text.length() > 4)  text = newText;
     }
 
     public int add() {
