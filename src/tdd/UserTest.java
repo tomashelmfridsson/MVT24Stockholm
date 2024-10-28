@@ -44,7 +44,26 @@ public class UserTest {
         user.setTypeOfUser("admin");
         assertEquals("admin", user.getTypeOfUser());
     };
-    // void setTypeOfUserSuper() {
 
-    //    void setTypeOfUserXYZ() {
+    @Test
+    void setTypeOfUserSuper() {
+        User user = new User("tomas", "abc123");
+        user.setTypeOfUser("super");
+        assertEquals("super", user.getTypeOfUser());
+    };
+
+    @Test
+    void setTypeOfUserNormal() {
+        User user = new User("tomas", "abc123");
+        user.setTypeOfUser("super");
+        user.setTypeOfUser("normal");
+        assertEquals("normal", user.getTypeOfUser());
+    };
+
+    @Test
+    void setTypeOfUserXYZ() {
+        User user = new User("tomas", "abc123");
+        user.setTypeOfUser("xyz");
+        assertEquals("normal", user.getTypeOfUser());
+    };
 }

@@ -4,6 +4,7 @@ public class User {
 
     private String username, password; // attribut, (klass, instans) variabler.
     private String typeOfUser;
+    private String types ="normal admin super";
 
     // Konstruktor med 2 string argument (parametrar) körs em gång vid "new"
     public User(String user, String pwd) {
@@ -28,6 +29,7 @@ public class User {
         return typeOfUser;
     }
 
-    public void setTypeOfUser(String admin) {
+    public void setTypeOfUser(String newType) {
+        if(types.contains(newType)) typeOfUser=newType;
     }
 }
