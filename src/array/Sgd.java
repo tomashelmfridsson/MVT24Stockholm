@@ -9,14 +9,14 @@ public class Sgd {
     public static void main(String[] args) {
         // Loop variant
         int numerator = 7*8*3*4; // Täljare
-        int denominator = 7*3; // Nämnare
+        int denominator = 7*3*5; // Nämnare
         int sgd = Math.min(numerator, denominator); // Största Gemensamma Delare
         for (; sgd > 1; sgd--) {
             if (numerator % sgd == 0 && denominator % sgd == 0) break;
         }
         System.out.println("SGD är " + sgd);
 
-        // Eulers algorith
+        // Euclidean algorithm
         // Math.max(numerator, denominator) = int n0 * Math.min(numerator, denominator) + rest0
         // Math.min(numerator, denominator) = int n1 * rest0 + rest1
         // rest0 = int n2 * rest1 + rest2
