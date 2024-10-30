@@ -10,8 +10,11 @@ import java.util.Scanner;
 public class Sgd {
     public static void main(String[] args) {
 
-        //int numerator = 7*8*3*2*2; // Täljare
+        //int numerator = 7*2*2*2*3*2*2; // Täljare
         //int denominator = 7*3*5*2; // Nämnare
+        // SGD är de siffror efter faktorisering som är samma
+        // I detta fall 2*3*7 = 42
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Skriv täljaren ");
         int numerator = scanner.nextInt();
@@ -19,10 +22,12 @@ public class Sgd {
         int denominator = scanner.nextInt();
 
         // Loop variant
+        long starttime = System.nanoTime();
         int sgd = Math.min(numerator, denominator); // Största Gemensamma Delare
         for (; sgd > 1; sgd--) {
             if (numerator % sgd == 0 && denominator % sgd == 0) break;
         }
+        System.out.println("Time with loop variant: " + (System.nanoTime() - starttime)+ " ns");
         System.out.println("SGD är " + sgd);
 
         // Euclidean algorithm
@@ -30,6 +35,7 @@ public class Sgd {
         // Math.min(numerator, denominator) = int n1 * rest0 + rest1
         // rest0 = int n2 * rest1 + rest2
         // osv till rest = 0, då är SGD senaste rest med värde
+        starttime = System.nanoTime();
         int max = Math.max(numerator, denominator);
         int min = Math.min(numerator, denominator);
         while (max % min != 0) {
@@ -37,9 +43,10 @@ public class Sgd {
             min = max % min;
             max = newMax;
         }
+        System.out.println("Time with Euclideans algorithm: " + (System.nanoTime() - starttime)+ " ns");
         System.out.println("SGD är " + min);
 
-        System.out.println("Täljaren efter förkortning är: "+(numerator /sgd));
-        System.out.println("Nämnaren efter förkortning är "+(denominator/sgd));
+        System.out.println("Täljaren efter förkortning är: " + (numerator / sgd));
+        System.out.println("Nämnaren efter förkortning är " + (denominator / sgd));
     }
 }
