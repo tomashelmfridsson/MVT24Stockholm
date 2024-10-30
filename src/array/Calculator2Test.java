@@ -10,14 +10,14 @@ public class Calculator2Test {
         char[] operators = {'+', '-', '*', '/'};
         int[] termer = {12, 56};
         Calculator2 calculator2 = new Calculator2(termer);
-        assertEquals(68, calculator2.operator(operators[0]));
+        assertEquals("68", calculator2.operator(operators[0]));
     }
 
     @Test
-    public void add() {
+    public void notValidOperator() {
         int[] termer = {12, 56};
         Calculator2 calculator2 = new Calculator2(termer);
-        assertEquals("Ogiltigt räkneset", calculator2.operator('%') );
+        assertEquals("Ogiltigt räknesätt", calculator2.operator('%') );
     }
 
 }

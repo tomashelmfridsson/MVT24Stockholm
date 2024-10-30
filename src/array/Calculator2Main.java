@@ -10,7 +10,7 @@ public class Calculator2Main {
         int tal2 = scanner.nextInt();
         System.out.print("Välj räkneset +,-,*,/ ");
         char rakneset = scanner.next().charAt(0);
-        Calculator2 calculator2 = new Calculator2({tal1,tal2});
+        Calculator2 calculator2 = new Calculator2(new int[]{tal1, tal2});
         System.out.println(calculator2.operator(rakneset));
     }
 }
