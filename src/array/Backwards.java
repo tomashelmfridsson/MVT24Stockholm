@@ -1,6 +1,7 @@
 package array;
 
 import java.util.Arrays;
+import java.util.Random;
 
 // 76.En array med 10 inlästa tal finns. Lägg över dessa tal i en annan array så att talen
 // kommer i omvänd ordning.
@@ -22,6 +23,11 @@ public class Backwards {
             arrayBackwards[array.length-1-j] = array[j];
         }
         System.out.println(Arrays.toString(arrayBackwards));
+
+        // slumpgenerator
+        Random random = new Random();
+        System.out.println(random.nextInt(0,100));
+
     }
 
 }
