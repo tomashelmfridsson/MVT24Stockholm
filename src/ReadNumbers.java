@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ReadNumbers {
     // 44.Skapa ett program som låter användaren bestämma hur många tal han vill summera. Läs in
     //detta antal tal och summera dem Skriv ut summan.
-
+    // Rolig uppgift
     public static void main(String[] args) {
         Scanner scannerInput = new Scanner(System.in);
         System.out.print("Skriv in antal nummer: ");
