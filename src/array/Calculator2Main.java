@@ -1,7 +1,7 @@
 package array;
 
 import java.util.Scanner;
-
+// only for test
 public class Calculator2Main {
     public static void main(String[] args) {
         Scanner scanner =new Scanner(System.in);
