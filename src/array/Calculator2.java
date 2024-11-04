@@ -1,5 +1,7 @@
 package array;
 
+// just a simple calculator
+
 public class Calculator2 {
 
     char[] operators = {'+', '-', '*', '/'};
