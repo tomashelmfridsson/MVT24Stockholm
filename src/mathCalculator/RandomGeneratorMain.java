@@ -4,13 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class RandomGeneratorMain {
-    // Genrera ett slumptal mellan 0 och 99
-    // gissa på ett tal och svara om slumptalet är större eller mindre
-    // Skriv Grattis när du gissat rätt
-    // Skriv enhetstest
-    // Skriv slumptalsgeneratorn i separaat klass
-    // Gissningslogiken får vara i valfri klass
 
+                   
 
     public static void main(String[] args) {
 
