@@ -1,6 +1,4 @@
 package switchcalculator;
-// TODO flytta allt detta till en ny fil och återställ gamla calculatorn från git hub
-
 
 import java.util.Scanner;
 
