@@ -1,47 +1,48 @@
 package switchcalculator;
 
 public class Calculator {
-    private int x, y;
+    private static int x;
+    private static int y;
 
-    public void setX(int x) {
-        this.x = x;
+    public static void setX(int xInput) {
+        x = xInput;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public static void setY(int yInput) {
+        y = yInput;
     }
 
-    public int add() {
+    public static int add() {
         return x + y;
 
     }
 
-    public int sub() {
+    public static int sub() {
         return x - y;
     }
 
-    public double div() {
+    public static double div() {
         return (double) x / y;
     }
 
-    public int mult() {
+    public static int mult() {
         return x * y;
     }
 
-    public int power() {
+    public static int power() {
         int result = (int) Math.pow(x, y);
         return result;
     }
 
-    public int max() {
+    public static int max() {
         return Math.max(x, y);
     }
 
-    public int rest() {
+    public static  int rest() {
         return x % y;
     }
 
-    public double eulersExp() {
+    public static double eulersExp() {
         return Math.exp(x);
     }
 }

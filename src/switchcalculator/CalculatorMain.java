@@ -19,60 +19,51 @@ public class CalculatorMain {
             System.out.println("8 Eulers Exponent");
             System.out.println("9 Avsluta");
             int mittVal = scanner.nextInt();
-            int tal1, tal2;
-            Calculator calc;
             switch (mittVal) {
                 case 1:
-                    calc = new Calculator();
-                    calc.setX(readNumber("term"));
-                    calc.setY(readNumber("term"));
-                    System.out.println("Summan är :" + calc.add());
+                    Calculator.setX(readNumber("term"));
+                    Calculator.setY(readNumber("term"));
+                    System.out.println("Summan är :" + Calculator.add());
                     break;
                 case 2:
-                    calc = new Calculator();
-                    calc.setX(readNumber("term"));
-                    calc.setY(readNumber("term"));
-                    System.out.println("Differensen är :" + calc.sub());
+                    Calculator.setX(readNumber("term"));
+                    Calculator.setY(readNumber("term"));
+                    System.out.println("Differensen är :" + Calculator.sub());
                     break;
                 case 3:
-                    calc = new Calculator();
-                    calc.setX(readNumber("faktor"));
-                    calc.setY(readNumber("faktor"));
-                    System.out.println("Produkten är :" + calc.mult());
+                    Calculator.setX(readNumber("faktor"));
+                    Calculator.setY(readNumber("faktor"));
+                    System.out.println("Produkten är :" + Calculator.mult());
                     break;
                 case 4:
-                    calc = new Calculator();
-                    calc.setX(readNumber("täljare"));
-                    calc.setY(readNumber("nämnare"));
-                    System.out.println("Kvoten är :" + calc.div());
+                    Calculator.setX(readNumber("täljare"));
+                    Calculator.setY(readNumber("nämnare"));
+                    System.out.println("Kvoten är :" + Calculator.div());
                     break;
                 case 5:
-                    calc = new Calculator();
-                    calc.setX(readNumber("basen")); // bas
-                    calc.setY(readNumber("exponenten")); // exponent
-                    System.out.println("Potensen är :" + calc.power());
+                    Calculator.setX(readNumber("basen")); // bas
+                    Calculator.setY(readNumber("exponenten")); // exponent
+                    System.out.println("Potensen är :" + Calculator.power());
                     break;
                 case 6:
-                    calc = new Calculator();
-                    calc.setX(readNumber("ett tal"));
-                    calc.setY(readNumber("ett tal"));
-                    System.out.println("Högsta talet är är :" + calc.max());
+                    Calculator.setX(readNumber("ett tal"));
+                    Calculator.setY(readNumber("ett tal"));
+                    System.out.println("Högsta talet är är :" + Calculator.max());
                     break;
                 case 7:
-                    calc = new Calculator();
-                    calc.setX(readNumber("täljaren"));
-                    calc.setY(readNumber("nämnaren"));
-                    System.out.println("Resten är: " + calc.rest());
+                    Calculator.setX(readNumber("täljaren"));
+                    Calculator.setY(readNumber("nämnaren"));
+                    System.out.println("Resten är: " + Calculator.rest());
                     break;
                 case 8:
-                    calc = new Calculator();
-                    calc.setX(readNumber("exponenten"));
-                    System.out.println("Eulers potens är: " + calc.eulersExp());
+                    Calculator.setX(readNumber("exponenten"));
+                    System.out.println("Eulers potens är: " + Calculator.eulersExp());
                     break;
                 case 9:
                     again = false;
                     break;
             }
+            System.out.println();
         } while (again);
     }
 
