@@ -1,13 +1,23 @@
 package oop;
 
 public class BankAccount {
-    private int saldo;
+    private double saldo;
+    private static String bankInformation = "Ebberuds bank";
+    private static String ranta = "5%";
+
+    public static String getBankInformation() {
+        return bankInformation;
+    }
+
+    public static String getRanta() {
+        return ranta;
+    }
 
     public void setSaldo(int newSaldo){
         saldo = newSaldo;
     }
 
-    public int getSaldo(){
+    public double getSaldo(){
         return saldo;
     }
 
@@ -15,7 +25,7 @@ public class BankAccount {
         saldo = saldo-amount;
     }
 
-    public void deposit(int amount){
+    public void deposit(double amount){
         saldo = saldo + amount;
     }
 
