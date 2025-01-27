@@ -7,7 +7,6 @@ import java.util.Scanner;
 // Väljer du att sluta slå får du totalpoängen som du samlat ihop under tidigare kast
 public class Main {
     public static void main(String[] args) {
-        int sumTotal = 0;
         int sum = 0;
         boolean again = true;
         Scanner scanner = new Scanner(System.in);
@@ -20,10 +19,14 @@ public class Main {
         String play = name1;
         boolean end = true;
         while (end) {
+            if (play.equals(name1)) {
+                System.out.println("Att kasta är " + playerA.getName());
+                System.out.println("Du har " + playerA.getSumTotal() + "poäng");
+            } else {
+                System.out.println("Att kasta är " + playerB.getName());
+                System.out.println("Du har " + playerB.getSumTotal() + "poäng");
+            }
             while (again) {
-                if (play.equals(name1)) {
-                    System.out.println("Att kasta är " + playerA.getName());
-                } else System.out.println("Att kasta är " + playerB.getName());
                 int dice = (int) (Math.random() * 6) + 1;
                 System.out.println("Ditt kast blev: " + dice);
                 if (dice != 1) {
@@ -43,19 +46,24 @@ public class Main {
                 playerA.addSumTotal(sum);
                 System.out.println("Din totala summa är: " + playerA.getSumTotal());
                 play = name2;
-                if (playerA.getSumTotal() >=50){
-                    System.out.println(playerA.getName()+" You are the winner");
+                again = true;
+                sum = 0;
+                if (playerA.getSumTotal() >= 50) {
+                    System.out.println(playerA.getName() + " You are the winner");
                     end = false;
                 }
             } else {
                 playerB.addSumTotal(sum);
                 System.out.println("Din totala summa är: " + playerB.getSumTotal());
                 play = name1;
-                if (playerB.getSumTotal() >=50){
-                    System.out.println(playerB.getName()+" You are the winner");
-                    end= false;
+                again = true;
+                sum = 0;
+                if (playerB.getSumTotal() >= 50) {
+                    System.out.println(playerB.getName() + " You are the winner");
+                    end = false;
                 }
             }
+            System.out.println();
         }
     }
 }
