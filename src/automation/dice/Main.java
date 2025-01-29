@@ -36,6 +36,7 @@ public class Main {
                     String input = scanner.nextLine();
                     if (input.equals("N")) again = false;
                 } else {
+                    System.out.println(" ********* OTUR ****************** ETTA **************************");
                     sum = 0;
                     again = false;
                 }
