@@ -13,15 +13,15 @@ public class ReadInteger {
         while(!validHeltal) {
             try {
                 System.out.print("Skriv in ett heltal: ");
-                heltal = scanner.nextInt();
+                heltal = scanner.nextInt();  // sdgfsdf(enter)
                 // heltal = Integer.parseInt(scanner.nextLine());
                 validHeltal =true;
             } catch (InputMismatchException exception) {
                 System.out.println("Det var inget heltal");
-                scanner.next();
+                scanner.nextLine();
             } catch (Exception exception) {
                 System.out.println(exception);
-                scanner.next();
+                scanner.nextLine();
             }
         }
         System.out.println("Det angivna heltal är: "+heltal);
