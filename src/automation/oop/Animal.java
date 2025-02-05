@@ -20,5 +20,4 @@ public class Animal {
 
     public void behavior(int length, int iterations){}
 
-
 }
