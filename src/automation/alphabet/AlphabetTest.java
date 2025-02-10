@@ -25,7 +25,8 @@ public class AlphabetTest {
 
     @Test
     public void testNumbers(){
-        assertEquals("ABC",ConvertAlphabet.fromIntegersArray(new int[]{1, 2, 3}));
+        int[] numberArray = new int[]{1,2,3};
+        assertEquals("ABC",ConvertAlphabet.fromIntegersArray(numberArray));
     }
 
     @Test

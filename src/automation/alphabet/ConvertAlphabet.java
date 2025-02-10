@@ -18,14 +18,13 @@ public class ConvertAlphabet {
         return -1;
     }
 
-    public static String fromIntegersArray(int[] array) {
+    public static String fromIntegersArray(int[] numbersArray) {
         String text = "";
-        for (int j : array) {
+        for (int j : numbersArray) {
             text = text.concat(String.valueOf(fromInteger(j)));
         }
         return text;
     }
-
 
     public static int[] fromWord(String words) {
         int[] numberArray = new int[words.length()];
@@ -35,10 +34,3 @@ public class ConvertAlphabet {
         return numberArray;
     }
 }
-
-// Bytte ut Asser till assertArrayEquals
-// Rättade till expecteds värden
-// Fixade till små bokstäver med uppercase
-// Lägger till mellanslaget först i strängwn för att korrigera onödiga
-// mellanslag blir 0
-// tal utanför 0-26 ger ' ' (space)
