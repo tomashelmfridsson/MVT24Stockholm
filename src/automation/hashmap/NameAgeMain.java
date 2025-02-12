@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 // Skapa en HashMap för att lagra namn och ålder.
 // Lägg till några namn och deras motsvarande ålder.
-public class NameAge {
+public class NameAgeMain {
 
     public static void main(String[] args) {
         // Skapa en Hashmap med namn(String) som key och ålder(Integer) som värde
