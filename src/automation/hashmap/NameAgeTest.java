@@ -19,6 +19,15 @@ public class NameAgeTest {
     }
 
     @Test
+    public void all14(){
+        NameAge nameAge = new NameAge();
+        nameAge.addperson("Pelle",14);
+        nameAge.addperson("Olle",14);
+        nameAge.addperson("Nisse",13);
+        //assertEquals("Pelle,Olle",nameAge.getYear(14));
+    }
+
+    @Test
     public void pelleAgeNotExist(){
         NameAge nameAge = new NameAge();
         assertEquals(-1,nameAge.getAge("Pelle"));
