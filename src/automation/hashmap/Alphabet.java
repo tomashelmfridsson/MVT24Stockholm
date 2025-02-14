@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Alphabet {
     private static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static String symbols = "!?+#¤%&/()=@£${[]}^¨~<>|;:";
-
     protected static HashMap<Character, Character> symbolsMap = new HashMap<>();
 
     static {
